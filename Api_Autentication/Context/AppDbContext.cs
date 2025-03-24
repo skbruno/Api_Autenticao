@@ -1,7 +1,7 @@
 ﻿using Api_Autentication.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Api_Autentication.AppDbContext
+namespace Api_Autentication.Context
 {
     public class AppDbContext : DbContext
     {
