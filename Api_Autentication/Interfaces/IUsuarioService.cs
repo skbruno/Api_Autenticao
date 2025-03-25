@@ -5,10 +5,10 @@ namespace Api_Autentication.Interfaces
 {
     public interface IUsuarioService
     {
-        Task<UsuarioDTO> Incluir(UsuarioDTO usuario);
-        Task<UsuarioDTO> Alterar(UsuarioDTO usuario);
-        Task<UsuarioDTO> Excluir(int id);
-        Task<UsuarioDTO> SelecionarAsync(int id);
-        Task<IEnumerable<UsuarioDTO>> SelecionarTodosAsync(UsuarioDTO usuario);
+        Task<UsuarioResponseDTO> CriarUsuariosAsync(UsuarioDTO usuario);
+        Task<UsuarioResponseDTO> AutenticarUsuarioAsync(UsuarioDTO usuario);
+        Task<UsuarioResponseDTO> AlterarAsync(UsuarioDTO usuario);
+        Task<UsuarioResponseDTO> ExcluirAsync(int id);
+        Task<IEnumerable<UsuarioResponseDTO>> SelecionarTodosAsync(UsuarioDTO usuario);
     }
 }

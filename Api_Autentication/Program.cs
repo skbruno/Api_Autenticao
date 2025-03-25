@@ -1,4 +1,6 @@
-using Api_Autentication.AppDbContext;
+using Api_Autentication.Context;
+using Api_Autentication.Interfaces;
+using Api_Autentication.Services;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -11,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 string? mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(Options => Options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
