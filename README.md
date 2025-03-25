@@ -3,7 +3,6 @@
 [postgresql-image]:https://img.shields.io/badge/mysql
 
 # ↪︎ Api Autenticação ↩︎
-### Ferramenta para comparação genética
 
 ## 😎 Quero mexer nesse projeto preciso de que?
 - Visual Studio - C# = .NET 8.0
