@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Api_Autentication.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250325122056_Atttabela")]
+    [Migration("20250325151842_Atttabela")]
     partial class Atttabela
     {
         /// <inheritdoc />
@@ -33,7 +33,12 @@ namespace Api_Autentication.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("PasswordSalt")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("UsuarioId");

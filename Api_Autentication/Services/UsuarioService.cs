@@ -5,6 +5,7 @@ using Api_Autentication.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Api_Autentication.Services;
 
 namespace Api_Autentication.Services
 {
@@ -17,38 +18,31 @@ namespace Api_Autentication.Services
             _context = context;
         }
 
-        public async Task<UsuarioResponseDTO> CriarUsuariosAsync(UsuarioDTO dto)
+        public async Task<UsuarioResponseDTO> CriarUsuariosAsync(Usuario user)
         {
-            var usuario = new Usuario
-            {
-                Nome = dto.Nome,
-                Email = dto.Email,
-                Password = dto.Password
-            };
 
-            await _context.Usuarios.AddAsync(usuario);
+            await _context.Usuarios.AddAsync(user);
             await _context.SaveChangesAsync();
 
             return new UsuarioResponseDTO
             {
-                UsuarioId = usuario.UsuarioId,
-                Nome = usuario.Nome,
-                Email = usuario.Email
+                UsuarioId = user.UsuarioId,
+                Nome = user.Nome,
+                Email = user.Email
             };
         }
 
-        public async Task<UsuarioResponseDTO> AutenticarUsuarioAsync(UsuarioDTO dto)
+        public async Task<UsuarioResponseDTO> AutenticarUsuarioAsync(Usuario user)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<UsuarioResponseDTO> AlterarAsync(UsuarioDTO dto)
+        public async Task<UsuarioResponseDTO> AlterarAsync(Usuario user)
         {
             var usuario = new Usuario
             {
-                Nome = dto.Nome,
-                Email = dto.Email,
-                Password = dto.Password
+                Nome = user.Nome,
+                Email = user.Email,
             };
 
             _context.Entry(usuario).State = EntityState.Modified;
@@ -68,7 +62,7 @@ namespace Api_Autentication.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<UsuarioResponseDTO>> SelecionarTodosAsync(UsuarioDTO usuario)
+        public async Task<IEnumerable<UsuarioResponseDTO>> SelecionarTodosAsync(Usuario user)
         {
             throw new NotImplementedException();
         }

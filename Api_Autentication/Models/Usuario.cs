@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Api_Autentication.Models
 {
@@ -7,7 +9,8 @@ namespace Api_Autentication.Models
         public int UsuarioId { get;  set; }
         public string? Nome { get;  set; }
         public string? Email { get;  set; }
-        public string? Password { get;  set; }
+        public string PasswordHash { get; set; }
+        public string PasswordSalt { get; set; }
 
         public Usuario ()
         {
@@ -21,12 +24,14 @@ namespace Api_Autentication.Models
             Email = email;
         }
 
-        public Usuario(string nome, string email, string password)
+        public Usuario(string nome, string email, string passwordHash, string passwordSalt)
         {
             Nome = nome;
             Email = email;
-            Password = password;
-            
+            PasswordHash = passwordHash;
+            PasswordSalt = passwordSalt;
+
+
         }
     }
 }
