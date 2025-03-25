@@ -10,37 +10,24 @@ namespace Api_Autentication.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioService _usuarioService;
-        private readonly ISenhaService _senhaService;
 
-        public UsuarioController(IUsuarioService usuarioService, ISenhaService senhaService)
+        public UsuarioController(IUsuarioService usuarioService)
         {
             _usuarioService = usuarioService;
-            _senhaService = senhaService;
         }
 
-        [HttpPost]
+        [HttpPost("criar_usuario")]
         public async Task<IActionResult> CriarUsuario(UsuarioDTO dto)
         {
-            var senhaDto = await _senhaService.GerarHash(dto.Password);
+            var usuarioCriado = await _usuarioService.CriarUsuariosAsync(dto);
+            return Ok(usuarioCriado);
+        }
 
-            var usuario = new Usuario
-            {
-                Nome = dto.Nome,
-                Email = dto.Email,
-                PasswordHash = senhaDto.SenhaHash,
-                PasswordSalt = senhaDto.SenhaSalt
-            };
-
-            var usuarioCriado = await _usuarioService.CriarUsuariosAsync(usuario);
-
-            var response = new UsuarioResponseDTO
-            {
-                UsuarioId = usuarioCriado.UsuarioId,
-                Nome = usuarioCriado.Nome,
-                Email = usuarioCriado.Email
-            };
-
-            return Ok(response);
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(loginDTO dto)
+        {
+            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            return Ok(Login);
         }
 
     }

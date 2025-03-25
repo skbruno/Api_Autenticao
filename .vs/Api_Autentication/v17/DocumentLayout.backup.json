@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\dtos\\senhadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\dtos\\senhadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,24 +11,12 @@
       "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\interfaces\\isenhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\interfaces\\isenhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\services\\senhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\services\\senhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,86 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Api_Autentication\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Models\\Usuario.cs",
-              "RelativeToolTip": "Api_Autentication\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T15:02:52.281Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SenhaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\DTOs\\SenhaDTO.cs",
-              "RelativeDocumentMoniker": "Api_Autentication\\DTOs\\SenhaDTO.cs",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\DTOs\\SenhaDTO.cs",
-              "RelativeToolTip": "Api_Autentication\\DTOs\\SenhaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T14:40:40.96Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Api_Autentication\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Api_Autentication\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCEAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T14:31:54.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuarioService.cs",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\UsuarioService.cs",
-              "RelativeDocumentMoniker": "Api_Autentication\\Services\\UsuarioService.cs",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\UsuarioService.cs",
-              "RelativeToolTip": "Api_Autentication\\Services\\UsuarioService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T14:27:50.728Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ISenhaService.cs",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Interfaces\\ISenhaService.cs",
-              "RelativeDocumentMoniker": "Api_Autentication\\Interfaces\\ISenhaService.cs",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Interfaces\\ISenhaService.cs",
-              "RelativeToolTip": "Api_Autentication\\Interfaces\\ISenhaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T13:58:09.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SenhaService.cs",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\SenhaService.cs",
-              "RelativeDocumentMoniker": "Api_Autentication\\Services\\SenhaService.cs",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\SenhaService.cs",
-              "RelativeToolTip": "Api_Autentication\\Services\\SenhaService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T13:57:40.086Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -136,41 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Api_Autentication\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "Api_Autentication\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IUsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Interfaces\\IUsuarioService.cs",
+              "RelativeDocumentMoniker": "Api_Autentication\\Interfaces\\IUsuarioService.cs",
+              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Interfaces\\IUsuarioService.cs",
+              "RelativeToolTip": "Api_Autentication\\Interfaces\\IUsuarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T22:40:34.226Z",
+              "WhenOpened": "2025-03-25T17:57:30.888Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\appsettings.json",
-              "RelativeDocumentMoniker": "Api_Autentication\\appsettings.json",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\appsettings.json",
-              "RelativeToolTip": "Api_Autentication\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-24T22:31:23.206Z",
+              "DocumentIndex": 1,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Api_Autentication\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Api_Autentication\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T14:31:54.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Program.cs",
-              "RelativeDocumentMoniker": "Api_Autentication\\Program.cs",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Program.cs",
-              "RelativeToolTip": "Api_Autentication\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "Api_Autentication\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "Api_Autentication\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAiwDYAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T22:25:13.872Z",
+              "WhenOpened": "2025-03-25T14:27:50.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SenhaService.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\SenhaService.cs",
+              "RelativeDocumentMoniker": "Api_Autentication\\Services\\SenhaService.cs",
+              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\SenhaService.cs",
+              "RelativeToolTip": "Api_Autentication\\Services\\SenhaService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwB4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T13:57:40.086Z",
               "EditorCaption": ""
             }
           ]

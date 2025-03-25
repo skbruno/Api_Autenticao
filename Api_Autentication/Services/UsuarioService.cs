@@ -12,14 +12,25 @@ namespace Api_Autentication.Services
     public class UsuarioService : IUsuarioService
     {
         private readonly AppDbContext _context;
+        private readonly ISenhaService _senhaService;
 
-        public UsuarioService(AppDbContext context)
+        public UsuarioService(AppDbContext context, ISenhaService senhaService)
         {
             _context = context;
+            _senhaService = senhaService;
         }
 
-        public async Task<UsuarioResponseDTO> CriarUsuariosAsync(Usuario user)
+        public async Task<UsuarioResponseDTO> CriarUsuariosAsync(UsuarioDTO dto)
         {
+            var SenhaDto = await _senhaService.GerarHash(dto.Password);
+
+            var user = new Usuario
+            {
+                Nome = dto.Nome,
+                Email = dto.Email,
+                PasswordHash = SenhaDto.SenhaHash,
+                PasswordSalt = SenhaDto.SenhaSalt
+            };
 
             await _context.Usuarios.AddAsync(user);
             await _context.SaveChangesAsync();
@@ -32,9 +43,28 @@ namespace Api_Autentication.Services
             };
         }
 
-        public async Task<UsuarioResponseDTO> AutenticarUsuarioAsync(Usuario user)
+        public async Task<UsuarioResponseDTO> AutenticarUsuarioAsync(loginDTO user)
         {
-            throw new NotImplementedException();
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == user.Email);
+
+            if (usuario == null)
+            {
+                throw new Exception("Email ou senha invalido");
+            }
+
+            var validacao = await _senhaService.ValidarSenha(user.Password, usuario.PasswordHash);
+
+            if (validacao)
+            {
+                return new UsuarioResponseDTO
+                {
+                    UsuarioId = usuario.UsuarioId,
+                    Nome = usuario.Nome,
+                    Email = usuario.Email
+                };
+            }
+
+            throw new Exception("Credenciais inválidas.");
         }
 
         public async Task<UsuarioResponseDTO> AlterarAsync(Usuario user)
