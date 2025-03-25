@@ -56,7 +56,7 @@
 | `email`      | `string` | **Obrigatório**. Email do usuário |
 | `senha`      | `string` | **Obrigatório**. Senha do usuário |
 
-#### Atualização de Usuário -EM CONSTRUÇÃO
+#### Atualização de Usuário - EM CONSTRUÇÃO
 
 ```http
   PUT /api/usuarios/:id
@@ -66,7 +66,7 @@
 | :---------- | :--------- | :------------------------------------------ |
 | `email`      | `string` | **Obrigatório**. Email do usuário |
 
-#### Exclusão  de Usuário -EM CONSTRUÇÃO
+#### Exclusão  de Usuário - EM CONSTRUÇÃO
 
 ```http
   DELETE /api/usuarios/:id
@@ -77,7 +77,7 @@
 | `email`      | `string` | **Obrigatório**. Email do usuário |
 
 
-#### Listar usuarios -EM CONSTRUÇÃO
+#### Listar usuarios - EM CONSTRUÇÃO
 
 ```http
   GET /api/usuarios
