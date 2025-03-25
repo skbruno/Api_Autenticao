@@ -7,7 +7,7 @@
 ✅ Criação de usuário com armazenamento seguro da senha no banco de dados.  
 ✅ Login de usuário com autenticação via JWT.  
 ✅ Atualização de dados do usuário (em construção).  
-✅ Exclusão de usuário (em construção).
+✅ Exclusão de usuário (em construção).  
 ✅ Listar todos os usuarios cadastrados (em construção).
 
 
@@ -82,3 +82,10 @@
 ```http
   GET /api/usuarios
 ```
+
+
+
+
+
+
+
