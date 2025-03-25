@@ -1,6 +1,7 @@
 ﻿using Api_Autentication.DTOs;
 using Api_Autentication.Interfaces;
 using Api_Autentication.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api_Autentication.Controllers
@@ -30,5 +31,28 @@ namespace Api_Autentication.Controllers
             return Ok(Login);
         }
 
+        [Authorize]
+        [HttpPut("alterar")]
+        public async Task<IActionResult> AlterarAsync(loginDTO dto)
+        {
+            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            return Ok(Login);
+        }
+
+        [Authorize]
+        [HttpDelete("Delete")]
+        public async Task<IActionResult> ExcluirAsync(loginDTO dto)
+        {
+            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            return Ok(Login);
+        }
+
+        [Authorize]
+        [HttpGet("All")]
+        public async Task<IActionResult> SelecionarTodosAsync(loginDTO dto)
+        {
+            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            return Ok(Login);
+        }
     }
 }

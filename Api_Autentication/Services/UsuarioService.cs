@@ -56,6 +56,9 @@ namespace Api_Autentication.Services
 
             if (validacao)
             {
+                var token = TokenService.GenerateToken(usuario);
+                Console.Write(token);
+
                 return new UsuarioResponseDTO
                 {
                     UsuarioId = usuario.UsuarioId,
