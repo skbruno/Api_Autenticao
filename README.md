@@ -36,7 +36,7 @@
 #### Cadastro de Usuário
 
 ```http
-  POST /api/autenusuarios
+  POST /api/auth/register
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
@@ -48,7 +48,7 @@
 #### Login de Usuário
 
 ```http
-  POST /api/login
+  POST /api/auth/login
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -59,7 +59,7 @@
 #### Atualização de Usuário - EM CONSTRUÇÃO
 
 ```http
-  PUT /api/usuarios/:id
+  PUT /api/users/:id
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -69,7 +69,7 @@
 #### Exclusão  de Usuário - EM CONSTRUÇÃO
 
 ```http
-  DELETE /api/usuarios/:id
+  DELETE /api/users/:id
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -80,8 +80,20 @@
 #### Listar usuarios - EM CONSTRUÇÃO
 
 ```http
-  GET /api/usuarios
+  GET /api/users 
 ```
+
+#### Listar usuarios específico - EM CONSTRUÇÃO
+
+```http
+  GET /api/users/:id
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `email`      | `string` | **Obrigatório**. Email do usuário |
+| `senha`      | `string` | **Obrigatório**. Senha do usuário |
+
+
 
 
 
