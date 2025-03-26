@@ -17,14 +17,14 @@ namespace Api_Autentication.Controllers
             _usuarioService = usuarioService;
         }
 
-        [HttpPost("criar_usuario")]
+        [HttpPost("/api/auth/register")]
         public async Task<IActionResult> CriarUsuario(UsuarioDTO dto)
         {
             var usuarioCriado = await _usuarioService.CriarUsuariosAsync(dto);
             return Ok(usuarioCriado);
         }
 
-        [HttpPost("login")]
+        [HttpPost("/api/auth/login")]
         public async Task<IActionResult> Login(loginDTO dto)
         {
             var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
@@ -32,7 +32,31 @@ namespace Api_Autentication.Controllers
         }
 
         [Authorize]
-        [HttpPut("alterar")]
+        [HttpPost("/api/auth/logout")]
+        public async Task<IActionResult> Logout(loginDTO dto)
+        {
+            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            return Ok(Login);
+        }
+
+        [Authorize]
+        [HttpGet("/api/users")]
+        public async Task<IActionResult> SelecionarTodosAsync(loginDTO dto)
+        {
+            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            return Ok(Login);
+        }
+
+        [Authorize]
+        [HttpGet("/api/users/{id}")]
+        public async Task<IActionResult> SelecionarUser(loginDTO dto)
+        {
+            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            return Ok(Login);
+        }
+
+        [Authorize]
+        [HttpPut("/api/users/{id}")]
         public async Task<IActionResult> AlterarAsync(loginDTO dto)
         {
             var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
@@ -40,19 +64,12 @@ namespace Api_Autentication.Controllers
         }
 
         [Authorize]
-        [HttpDelete("Delete")]
+        [HttpDelete("/api/users/{id}")]
         public async Task<IActionResult> ExcluirAsync(loginDTO dto)
         {
             var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
             return Ok(Login);
         }
 
-        [Authorize]
-        [HttpGet("All")]
-        public async Task<IActionResult> SelecionarTodosAsync(loginDTO dto)
-        {
-            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
-            return Ok(Login);
-        }
     }
 }
