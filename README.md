@@ -66,7 +66,7 @@
 #### Listar Usuários Específico 
 
 ```http
-  GET /api/users/:id
+  GET /api/users/:email
 ```
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
