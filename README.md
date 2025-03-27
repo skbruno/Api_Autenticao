@@ -77,13 +77,13 @@
 | `email`      | `string` | **Obrigatório**. Email do usuário |
 
 
-#### Listar usuarios - EM CONSTRUÇÃO
+#### Listar usuarios
 
 ```http
   GET /api/users 
 ```
 
-#### Listar usuarios específico - EM CONSTRUÇÃO
+#### Listar usuarios específico 
 
 ```http
   GET /api/users/:id
@@ -91,7 +91,6 @@
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `email`      | `string` | **Obrigatório**. Email do usuário |
-| `senha`      | `string` | **Obrigatório**. Senha do usuário |
 
 
 
