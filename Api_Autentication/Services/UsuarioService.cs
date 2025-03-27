@@ -95,9 +95,14 @@ namespace Api_Autentication.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<UsuarioResponseDTO>> SelecionarTodosAsync(Usuario user)
+        public async Task<List<Usuario>> ObterTodosAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Usuarios.AsNoTracking().ToListAsync();
+        }
+
+        public async Task<Usuario> ObterUsuarioAsync(string email)
+        {
+            return await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
         }
     }
 }

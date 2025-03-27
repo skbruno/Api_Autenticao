@@ -41,18 +41,18 @@ namespace Api_Autentication.Controllers
 
         [Authorize]
         [HttpGet("/api/users")]
-        public async Task<IActionResult> SelecionarTodosAsync(loginDTO dto)
+        public async Task<IActionResult> SelecionarTodosAsync()
         {
-            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
-            return Ok(Login);
+            var listar = await _usuarioService.ObterTodosAsync();
+            return Ok(listar);
         }
 
         [Authorize]
-        [HttpGet("/api/users/{id}")]
-        public async Task<IActionResult> SelecionarUser(loginDTO dto)
+        [HttpGet("/api/users/{email}")]
+        public async Task<IActionResult> SelecionarUsuario(string email)
         {
-            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
-            return Ok(Login);
+            var listarUsuario = await _usuarioService.ObterUsuarioAsync(email);
+            return Ok(listarUsuario);
         }
 
         [Authorize]
