@@ -20,7 +20,7 @@ namespace Api_Autentication.Controllers
         [HttpPost("/api/auth/register")]
         public async Task<IActionResult> CriarUsuario(UsuarioDTO dto)
         {
-            var usuarioCriado = await _usuarioService.CriarUsuariosAsync(dto);
+            var usuarioCriado = await _usuarioService.CriarUsuarioAsync(dto);
             return Ok(usuarioCriado);
         }
 
@@ -43,7 +43,7 @@ namespace Api_Autentication.Controllers
         [HttpGet("/api/users")]
         public async Task<IActionResult> SelecionarTodosAsync()
         {
-            var listar = await _usuarioService.ObterTodosAsync();
+            var listar = await _usuarioService.ObterTodosUsuarioAsync();
             return Ok(listar);
         }
 

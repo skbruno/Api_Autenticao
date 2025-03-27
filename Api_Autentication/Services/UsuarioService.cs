@@ -20,7 +20,7 @@ namespace Api_Autentication.Services
             _senhaService = senhaService;
         }
 
-        public async Task<UsuarioResponseDTO> CriarUsuariosAsync(UsuarioDTO dto)
+        public async Task<UsuarioResponseDTO> CriarUsuarioAsync(UsuarioDTO dto)
         {
             var SenhaDto = await _senhaService.GerarHash(dto.Password);
 
@@ -70,7 +70,7 @@ namespace Api_Autentication.Services
             throw new Exception("Credenciais inválidas.");
         }
 
-        public async Task<UsuarioResponseDTO> AlterarAsync(Usuario user)
+        public async Task<UsuarioResponseDTO> AlterarUsuarioAsync(Usuario user)
         {
             var usuario = new Usuario
             {
@@ -90,12 +90,12 @@ namespace Api_Autentication.Services
 
         }
 
-        public async Task<UsuarioResponseDTO> ExcluirAsync(int id)
+        public async Task<UsuarioResponseDTO> ExcluirUsuarioAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<List<Usuario>> ObterTodosAsync()
+        public async Task<List<Usuario>> ObterTodosUsuarioAsync()
         {
             return await _context.Usuarios.AsNoTracking().ToListAsync();
         }
