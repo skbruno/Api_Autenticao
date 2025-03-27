@@ -56,6 +56,28 @@
 | `email`      | `string` | **Obrigatório**. Email do usuário |
 | `senha`      | `string` | **Obrigatório**. Senha do usuário |
 
+
+#### Listar Usuário
+
+```http
+  GET /api/users 
+```
+
+#### Listar Usuários Específico 
+
+```http
+  GET /api/users/:id
+```
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `email`      | `string` | **Obrigatório**. Email do usuário |
+
+#### Logout Usuario - EM CONSTRUÇÃO
+
+```http
+  POST /api/auth/logout
+```
+
 #### Atualização de Usuário - EM CONSTRUÇÃO
 
 ```http
@@ -77,20 +99,7 @@
 | `email`      | `string` | **Obrigatório**. Email do usuário |
 
 
-#### Listar usuarios
 
-```http
-  GET /api/users 
-```
-
-#### Listar usuarios específico 
-
-```http
-  GET /api/users/:id
-```
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `email`      | `string` | **Obrigatório**. Email do usuário |
 
 
 
