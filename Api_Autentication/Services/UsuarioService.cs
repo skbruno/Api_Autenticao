@@ -85,16 +85,31 @@ namespace Api_Autentication.Services
             return await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
         }
 
-        public async Task<UsuarioResponseDTO> AlterarUsuarioAsync(UsuarioDTO user)
+        public async Task<UsuarioResponseDTO> AlterarUsuarioAsync(AlteracaoDTO user, int id)
         {
-            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == user.Email);
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.UsuarioId == id);
 
-            var SenhaDto = await _senhaService.GerarHash(user.Password);
+            if (usuario == null)
+            {
+                throw new Exception("Usuario não encontrado");
+            }
 
-            usuario.Nome = user.Nome;
-            usuario.Email = user.Email;
-            usuario.PasswordHash = SenhaDto.SenhaHash;
-            usuario.PasswordSalt = SenhaDto.SenhaSalt;
+            if (!string.IsNullOrWhiteSpace(user.Nome))
+            {
+                usuario.Nome = user.Nome;
+            }
+
+            if (!string.IsNullOrWhiteSpace(user.Email))
+            {
+                usuario.Email = user.Email;
+            }
+
+            if (!string.IsNullOrWhiteSpace(user.Password))
+            {
+                var SenhaDto = await _senhaService.GerarHash(user.Password);
+                usuario.PasswordHash = SenhaDto.SenhaHash;
+                usuario.PasswordSalt = SenhaDto.SenhaSalt;
+            }
 
             _context.Entry(usuario).State = EntityState.Modified;
             await _context.SaveChangesAsync();
@@ -106,6 +121,7 @@ namespace Api_Autentication.Services
                 Email = usuario.Email
             };
         }
+
 
         public async Task<bool> ExcluirUsuarioAsync(int id)
         {

@@ -56,10 +56,10 @@ namespace Api_Autentication.Controllers
         }
 
         [Authorize]
-        [HttpPut("/api/users")]
-        public async Task<IActionResult> AlterarAsync(UsuarioDTO dto)
+        [HttpPatch("/api/users/{id}")]
+        public async Task<IActionResult> AlterarAsync(AlteracaoDTO dto, int id)
         {
-            var Login = await _usuarioService.AlterarUsuarioAsync(dto);
+            var Login = await _usuarioService.AlterarUsuarioAsync(dto, id);
             return Ok(Login);
         }
 
