@@ -70,27 +70,7 @@ namespace Api_Autentication.Services
             throw new Exception("Credenciais inválidas.");
         }
 
-        public async Task<UsuarioResponseDTO> AlterarUsuarioAsync(Usuario user)
-        {
-            var usuario = new Usuario
-            {
-                Nome = user.Nome,
-                Email = user.Email,
-            };
-
-            _context.Entry(usuario).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-
-            return new UsuarioResponseDTO
-            {
-                UsuarioId = usuario.UsuarioId,
-                Nome = usuario.Nome,
-                Email = usuario.Email
-            };
-
-        }
-
-        public async Task<UsuarioResponseDTO> ExcluirUsuarioAsync(int id)
+        public Task<UsuarioResponseDTO> LogoutUsuarioAsync(loginDTO user)
         {
             throw new NotImplementedException();
         }
@@ -103,6 +83,44 @@ namespace Api_Autentication.Services
         public async Task<Usuario> ObterUsuarioAsync(string email)
         {
             return await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
+        }
+
+        public async Task<UsuarioResponseDTO> AlterarUsuarioAsync(UsuarioDTO user)
+        {
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == user.Email);
+
+            var SenhaDto = await _senhaService.GerarHash(user.Password);
+
+            usuario.Nome = user.Nome;
+            usuario.Email = user.Email;
+            usuario.PasswordHash = SenhaDto.SenhaHash;
+            usuario.PasswordSalt = SenhaDto.SenhaSalt;
+
+            _context.Entry(usuario).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return new UsuarioResponseDTO
+            {
+                UsuarioId = usuario.UsuarioId,
+                Nome = usuario.Nome,
+                Email = usuario.Email
+            };
+        }
+
+        public async Task<bool> ExcluirUsuarioAsync(int id)
+        {
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.UsuarioId == id);
+            _context.Remove(usuario);
+
+            var estadoObj = _context.Entry(usuario);
+            if (estadoObj.State == EntityState.Deleted)
+            {
+                _context.SaveChangesAsync();
+                return true;
+            }
+
+            return false;
+
         }
     }
 }

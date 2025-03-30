@@ -18,7 +18,7 @@ namespace Api_Autentication.Services
                 {
                       new Claim("usuarioId", usuario.UsuarioId.ToString()),
                 }),
-                Expires = DateTime.UtcNow.AddHours(3),
+                Expires = DateTime.UtcNow.AddMinutes(3),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 

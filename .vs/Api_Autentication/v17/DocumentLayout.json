@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|c:\\users\\bruno\\onedrive\\documentos\\c_sharp\\api_autenticacao\\api_autentication\\api_autentication\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5F1F6FF-C945-4355-B5D9-69A2891F3E98}|Api_Autentication\\Api_Autentication.csproj|solutionrelative:api_autentication\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Api_Autentication\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Api_Autentication\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-27T02:51:33.504Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -51,41 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Api_Autentication\\Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "Api_Autentication\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwCsAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T04:29:13.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IUsuarioService.cs",
-              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Interfaces\\IUsuarioService.cs",
-              "RelativeDocumentMoniker": "Api_Autentication\\Interfaces\\IUsuarioService.cs",
-              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Interfaces\\IUsuarioService.cs",
-              "RelativeToolTip": "Api_Autentication\\Interfaces\\IUsuarioService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T17:57:30.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\UsuarioService.cs",
               "RelativeDocumentMoniker": "Api_Autentication\\Services\\UsuarioService.cs",
               "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Services\\UsuarioService.cs",
               "RelativeToolTip": "Api_Autentication\\Services\\UsuarioService.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAIwGUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAIwFsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T14:27:50.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Interfaces\\IUsuarioService.cs",
+              "RelativeDocumentMoniker": "Api_Autentication\\Interfaces\\IUsuarioService.cs",
+              "ToolTip": "C:\\Users\\bruno\\OneDrive\\Documentos\\C_sharp\\Api_Autenticacao\\Api_Autentication\\Api_Autentication\\Interfaces\\IUsuarioService.cs",
+              "RelativeToolTip": "Api_Autentication\\Interfaces\\IUsuarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T17:57:30.888Z",
               "EditorCaption": ""
             }
           ]

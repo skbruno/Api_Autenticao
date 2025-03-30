@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api_Autentication.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UsuarioController : ControllerBase
     {
@@ -35,7 +35,7 @@ namespace Api_Autentication.Controllers
         [HttpPost("/api/auth/logout")]
         public async Task<IActionResult> Logout(loginDTO dto)
         {
-            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            var Login = await _usuarioService.LogoutUsuarioAsync(dto);
             return Ok(Login);
         }
 
@@ -56,18 +56,18 @@ namespace Api_Autentication.Controllers
         }
 
         [Authorize]
-        [HttpPut("/api/users/{id}")]
-        public async Task<IActionResult> AlterarAsync(loginDTO dto)
+        [HttpPut("/api/users")]
+        public async Task<IActionResult> AlterarAsync(UsuarioDTO dto)
         {
-            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            var Login = await _usuarioService.AlterarUsuarioAsync(dto);
             return Ok(Login);
         }
 
         [Authorize]
         [HttpDelete("/api/users/{id}")]
-        public async Task<IActionResult> ExcluirAsync(loginDTO dto)
+        public async Task<IActionResult> ExcluirAsync(int id)
         {
-            var Login = await _usuarioService.AutenticarUsuarioAsync(dto);
+            var Login = await _usuarioService.ExcluirUsuarioAsync(id);
             return Ok(Login);
         }
 
