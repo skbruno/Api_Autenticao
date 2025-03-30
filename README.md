@@ -78,17 +78,19 @@
   POST /api/auth/logout
 ```
 
-#### Atualização de Usuário - EM CONSTRUÇÃO
+#### Atualização de Usuário
 
 ```http
-  PUT /api/users/:id
+  PUT /api/users
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `email`      | `string` | **Obrigatório**. Email do usuário |
+| `nome` | `string` | Nome do usuário |
+| `email` | `string` | Email do usuário |
+| `senha` | `string` | Senha do usuário |
 
-#### Exclusão  de Usuário - EM CONSTRUÇÃO
+#### Exclusão  de Usuário 
 
 ```http
   DELETE /api/users/:id
