@@ -85,14 +85,12 @@ namespace Api_Autentication.Services
             return await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == email);
         }
 
-        public async Task<UsuarioResponseDTO> AlterarUsuarioAsync(AlteracaoDTO user, int id)
+        public async Task<bool> AlterarUsuarioAsync(AlteracaoDTO user, int id)
         {
             var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.UsuarioId == id);
 
             if (usuario == null)
-            {
-                throw new Exception("Usuario não encontrado");
-            }
+                return false;
 
             if (!string.IsNullOrWhiteSpace(user.Nome))
             {
@@ -114,29 +112,26 @@ namespace Api_Autentication.Services
             _context.Entry(usuario).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 
-            return new UsuarioResponseDTO
-            {
-                UsuarioId = usuario.UsuarioId,
-                Nome = usuario.Nome,
-                Email = usuario.Email
-            };
+            return true;
         }
 
 
         public async Task<bool> ExcluirUsuarioAsync(int id)
         {
             var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.UsuarioId == id);
-            _context.Remove(usuario);
 
+            if (usuario == null)
+                return false;
+
+            _context.Remove(usuario);
             var estadoObj = _context.Entry(usuario);
+
             if (estadoObj.State == EntityState.Deleted)
             {
                 _context.SaveChangesAsync();
                 return true;
             }
-
             return false;
-
         }
     }
 }

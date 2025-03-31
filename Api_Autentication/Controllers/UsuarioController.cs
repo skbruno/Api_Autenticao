@@ -3,6 +3,7 @@ using Api_Autentication.Interfaces;
 using Api_Autentication.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Api_Autentication.Controllers
 {
@@ -56,19 +57,51 @@ namespace Api_Autentication.Controllers
         }
 
         [Authorize]
-        [HttpPatch("/api/users/{id}")]
-        public async Task<IActionResult> AlterarAsync(AlteracaoDTO dto, int id)
+        [HttpPatch("/api/users/me")]
+        public async Task<IActionResult> AlterarAsync([FromBody] AlteracaoDTO dto)
         {
-            var Login = await _usuarioService.AlterarUsuarioAsync(dto, id);
-            return Ok(Login);
+            var tokenUsuario = User.FindFirst("UsuarioId")?.Value;
+
+            if (tokenUsuario == null)
+            {
+                return Unauthorized(new { message = "Usuario nao autenticado" });
+            }
+
+            int usuarioId = int.Parse(tokenUsuario);
+            var sucesso = await _usuarioService.AlterarUsuarioAsync(dto, usuarioId);
+
+            if (sucesso)
+            {
+                return Ok(new { message = "Usuario alterado com sucesso" });
+            }
+            else
+            {
+                return BadRequest(new { message = "Erro ao atualizar usuario" });
+            }
         }
 
         [Authorize]
-        [HttpDelete("/api/users/{id}")]
-        public async Task<IActionResult> ExcluirAsync(int id)
+        [HttpDelete("/api/users/me")]
+        public async Task<IActionResult> ExcluirAsync()
         {
-            var Login = await _usuarioService.ExcluirUsuarioAsync(id);
-            return Ok(Login);
+            var tokenUsuario = User.FindFirst("UsuarioId")?.Value;
+
+            if (tokenUsuario == null)
+            {
+                return Unauthorized(new { message = "Usuario nao autenticado" });
+            }
+
+            int usuarioId = int.Parse(tokenUsuario);
+            bool sucesso = await _usuarioService.ExcluirUsuarioAsync(usuarioId);
+
+            if (sucesso)
+            {
+                return Ok(new { message = "Usuario deletado com sucesso" });
+            }
+            else
+            {
+                return BadRequest(new { message = "Erro ao deletar usuario" });
+            }
         }
 
     }

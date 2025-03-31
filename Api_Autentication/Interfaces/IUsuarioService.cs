@@ -10,7 +10,7 @@ namespace Api_Autentication.Interfaces
         Task<UsuarioResponseDTO> LogoutUsuarioAsync(loginDTO usuario);
         Task<List<Usuario>> ObterTodosUsuarioAsync();
         Task<Usuario> ObterUsuarioAsync(string email);
-        Task<UsuarioResponseDTO> AlterarUsuarioAsync(AlteracaoDTO usuario, int id);
+        Task<bool> AlterarUsuarioAsync(AlteracaoDTO usuario, int id);
         Task<bool> ExcluirUsuarioAsync(int id);
     }
 }
