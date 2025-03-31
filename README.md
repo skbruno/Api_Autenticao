@@ -81,24 +81,21 @@
 #### Atualização de Usuário
 
 ```http
-  PUT /api/users
+  PUT /api/users/me
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `nome` | `string` | Nome do usuário |
-| `email` | `string` | Email do usuário |
-| `senha` | `string` | Senha do usuário |
+| `nome` | `string` | **Opcional** Nome do usuário |
+| `email` | `string` | **Opcional** Email do usuário |
+| `senha` | `string` | **Opcional** Senha do usuário |
 
 #### Exclusão  de Usuário 
 
 ```http
-  DELETE /api/users/:id
+  DELETE /api/users/me
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `email`      | `string` | **Obrigatório**. Email do usuário |
 
 
 
