@@ -30,7 +30,10 @@
 - `Swashbuckle.AspNetCore` - versão **6.6.2**  
 - `Microsoft.EntityFrameworkCore.Design` - versão **8.0.1**  
 - `Microsoft.AspNetCore.Authentication.JwtBearer` - versão **7.0.14**
-- git clone https://github.com/skbruno/Api_Autenticao.git
+  
+  ```http
+  git clone https://github.com/skbruno/Api_Autenticao.git
+  ```
 
 ### 📚 Rotas da API
 
