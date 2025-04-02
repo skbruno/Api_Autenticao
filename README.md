@@ -35,7 +35,7 @@
   git clone https://github.com/skbruno/Api_Autenticao.git
   ```
 
-### 📚 Rotas da API
+### 📚 EndPoints/Rotas da API
 
 #### Cadastro de Usuário
 
