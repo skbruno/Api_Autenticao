@@ -18,7 +18,7 @@ namespace Api_Autentication.Services
                 {
                       new Claim("usuarioId", usuario.UsuarioId.ToString()),
                 }),
-                Expires = DateTime.UtcNow.AddMinutes(3),
+                Expires = DateTime.UtcNow.AddMinutes(15),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
@@ -31,5 +31,27 @@ namespace Api_Autentication.Services
                 token = tokenString
             };
         }
+
+        public static string GerarTokenExpirado(Usuario user)
+        {
+            var key = Encoding.ASCII.GetBytes(Key.Secret);
+            var tokenConfig = new JwtSecurityTokenHandler();
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim(ClaimTypes.Name, user.Email)
+                }),
+
+                NotBefore = DateTime.UtcNow.AddDays(-2), 
+                Expires = DateTime.UtcNow.AddDays(-1),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            var token = tokenConfig.CreateToken(tokenDescriptor);
+            return tokenConfig.WriteToken(token);
+        }
+
     }
 }

@@ -70,9 +70,16 @@ namespace Api_Autentication.Services
             throw new Exception("Credenciais inválidas.");
         }
 
-        public Task<UsuarioResponseDTO> LogoutUsuarioAsync(loginDTO user)
+        public async Task<Usuario> LogoutUsuarioAsync(int id)
         {
-            throw new NotImplementedException();
+            var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.UsuarioId == id);
+
+            if (usuario == null)
+                return null;
+
+            var tokenExpirado = TokenService.GerarTokenExpirado(usuario);
+
+            return usuario;
         }
 
         public async Task<List<Usuario>> ObterTodosUsuarioAsync()

@@ -33,11 +33,20 @@ namespace Api_Autentication.Controllers
         }
 
         [Authorize]
-        [HttpPost("/api/auth/logout")]
-        public async Task<IActionResult> Logout(loginDTO dto)
+        [HttpPost("/api/auth/logout/me")]
+        public async Task<IActionResult> Logout()
         {
-            var Login = await _usuarioService.LogoutUsuarioAsync(dto);
-            return Ok(Login);
+            var tokenUsuario = User.FindFirst("UsuarioId")?.Value;
+
+            if (tokenUsuario == null)
+            {
+                return Unauthorized(new { message = "Usuario nao autenticado" });
+            }
+
+            int usuarioId = int.Parse(tokenUsuario);
+            var sucesso = await _usuarioService.LogoutUsuarioAsync(usuarioId);
+
+            return Ok("Logout feito com sucesso");
         }
 
         [Authorize]
