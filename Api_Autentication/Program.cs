@@ -1,4 +1,5 @@
 using Api_Autentication.Context;
+using Api_Autentication.Filters;
 using Api_Autentication.Interfaces;
 using Api_Autentication.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -10,9 +11,12 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container e add filter global na classes de controllers
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(typeof(ApiExceptionFilter));
+});
 
-builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 

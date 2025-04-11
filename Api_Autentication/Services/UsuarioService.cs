@@ -84,6 +84,8 @@ namespace Api_Autentication.Services
 
         public async Task<List<Usuario>> ObterTodosUsuarioAsync()
         {
+            //throw new Exception("Ex");
+
             return await _context.Usuarios.AsNoTracking().ToListAsync();
         }
 
