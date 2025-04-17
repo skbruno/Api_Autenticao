@@ -43,7 +43,7 @@ namespace Api_Autentication.Services
             };
         }
 
-        public async Task<UsuarioResponseDTO> AutenticarUsuarioAsync(loginDTO user)
+        public async Task<UsuarioResponseTokenDTO> AutenticarUsuarioAsync(loginDTO user)
         {
             var usuario = await _context.Usuarios.FirstOrDefaultAsync(x => x.Email == user.Email);
 
@@ -59,11 +59,12 @@ namespace Api_Autentication.Services
                 var token = TokenService.GenerateToken(usuario);
                 Console.Write(token);
 
-                return new UsuarioResponseDTO
+                return new UsuarioResponseTokenDTO
                 {
                     UsuarioId = usuario.UsuarioId,
                     Nome = usuario.Nome,
-                    Email = usuario.Email
+                    Email = usuario.Email,
+                    Token = token
                 };
             }
 

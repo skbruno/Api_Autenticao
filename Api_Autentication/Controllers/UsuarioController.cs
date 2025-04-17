@@ -25,7 +25,7 @@ namespace Api_Autentication.Controllers
             return Ok(usuarioCriado);
         }
 
-        [HttpPost("/api/auth/login")]
+        [HttpPost("api/auth/login")]
         public async Task<IActionResult> Login(loginDTO dto)
         {
             var Login = await _usuarioService.AutenticarUsuarioAsync(dto);

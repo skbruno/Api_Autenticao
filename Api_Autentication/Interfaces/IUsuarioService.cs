@@ -6,7 +6,7 @@ namespace Api_Autentication.Interfaces
     public interface IUsuarioService
     {
         Task<UsuarioResponseDTO> CriarUsuarioAsync(UsuarioDTO dto);
-        Task<UsuarioResponseDTO> AutenticarUsuarioAsync(loginDTO usuario);
+        Task<UsuarioResponseTokenDTO> AutenticarUsuarioAsync(loginDTO usuario);
         Task<Usuario> LogoutUsuarioAsync(int id);
         Task<List<Usuario>> ObterTodosUsuarioAsync();
         Task<Usuario> ObterUsuarioAsync(string email);
