@@ -9,7 +9,7 @@ namespace Api_Autentication.Services
 {
     public class TokenService
     {
-        public static object GenerateToken(Usuario usuario)
+        public static string GenerateToken(Usuario usuario)
         {
             var key = Encoding.ASCII.GetBytes(Key.Secret);
             var tokenConfig = new SecurityTokenDescriptor
@@ -26,10 +26,7 @@ namespace Api_Autentication.Services
             var token = tokenHandler.CreateToken(tokenConfig);
             var tokenString = tokenHandler.WriteToken(token);
 
-            return new
-            {
-                token = tokenString
-            };
+            return tokenString;
         }
 
         public static string GerarTokenExpirado(Usuario user)
