@@ -83,7 +83,7 @@ namespace Api_Autentication.Services
             return usuario;
         }
 
-        public async Task<List<Usuario>> ObterTodosUsuarioAsync()
+        public async Task<IEnumerable<Usuario>> ObterTodosUsuarioAsync()
         {
             //throw new Exception("Ex");
 

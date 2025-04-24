@@ -8,7 +8,7 @@ namespace Api_Autentication.Interfaces
         Task<UsuarioResponseDTO> CriarUsuarioAsync(UsuarioDTO dto);
         Task<UsuarioResponseTokenDTO> AutenticarUsuarioAsync(loginDTO usuario);
         Task<Usuario> LogoutUsuarioAsync(int id);
-        Task<List<Usuario>> ObterTodosUsuarioAsync();
+        Task<IEnumerable<Usuario>> ObterTodosUsuarioAsync();
         Task<Usuario> ObterUsuarioAsync(string email);
         Task<bool> AlterarUsuarioAsync(AlteracaoDTO usuario, int id);
         Task<bool> ExcluirUsuarioAsync(int id);
